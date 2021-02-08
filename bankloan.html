@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Data Visualization-Streamlit</title>
+		<title>Bank Loan Prediction-ANN</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -46,47 +46,84 @@
 							<section class="post">
 								<header class="major">
 									<!-- <span class="date">April 25, 2017</span> -->
-									<h1>Visualization of Sentiment Data<br />
-									Using Streamlit</h1>
-									<p>The purpose of this project is design a visualization application that would allow the end-users to 
-										quickly understand customer opinions about them using data from Twitter. The project deals with sentiment analysis data for various US airlines.
+									<h1>Bank Loan Prediction<br />
+									Using Tensorflow and Keras</h1>
+									<p>The purpose of this project is design a machine learning algorithm using Artificial Neural Network that would predict the likelihood of a customer getting approved for a bank loan.
 									</p>
 								</header>
-								<div class="image main"><img src="images/streamlit_us/streamlit_main.PNG" alt="" /></div>
+								<div class="image main"><img src="images/bankloan/keras-tensorflow-logo.jpg" alt="" /></div>
 								<UL>
 									<h3><LH>Methods Used</LH></h3>
-									<LI>Web Deployment
 									<LI>Data Visualization
-									<LI>Customer Satisfaction
+									<LI>Exploratory Data Analysis
+									<LI>Machine Learning
 									<LI>etc.
 								  </UL>
 
 								<UL>
 									<h3><LH>Technologies</LH></h3>
 									<LI>Python, Markdown		
+									<LI>Tensorflow, Keras
 									<LI>Pandas, numpy, matplotlib, seaborn
-									<LI>HTML
 									<LI>Jupyter
 									<LI>etc.
 								</UL>
 
 								<h3>Project Description</h3>
-								<p>The data used on this project already has sentiment analysis done on it. The data was used from <a href="https://www.kaggle.com/crowdflower/twitter-airline-sentiment" target="_blank" rel="noopener noreferrer">Kaggle</a>. The data comprises of number of tweets, each with a sentiment and airline associated with it. Each tweet also contains the latitude and longitude information for location tracking. The mail goal of this project is to learn web application deployment using <a href="https://www.streamlit.io/" target="_blank" rel="noopener noreferrer">Streamlit</a>. Streamlit is a new tool that allows data enthusiasts to quickly convert a python script into neat and fast web applications involving machine learning, data analytics and pretty much anything.   
+								<p>The dataset for this project consists of labeled data with following features. The target column is called 'Personal Loan' which is used to predict whether a customer gets approved for loan or not.
 								</p>
-								<p>This tool is build with the end-client in mind and has been designed in a way that would allow various customizability and usability across different features. Below, you will see some of the main features and highlights from this project.</p>
+								<UL>
+									<LI>ID: Customer ID
+									<LI>Age: Customer Age
+									<LI>Experience: Amount of work experience in years
+									<LI>Income: Amount of annual income (in thousands)
+									<LI>Zipcode: Zipcode of where customer lives
+									<LI>Family: Number of family members
+									<LI>CCAvg: Average monthly credit card spendings
+									<LI>Education: Education level (1: Bachelor, 2: Master, 3: Advanced Degree)
+									<LI>Mortgage: Mortgage of house (in thousands)
+									<LI>Securities Account: Boolean of whether customer has a securities account
+									<LI>CD Account: Boolean of whether customer has Certificate of Deposit account
+									<LI>Online: Boolean of whether customer uses online banking
+									<LI>CreditCard: Does the customer use credit card issued by the bank?
+									<LI>Personal Loan: This is the target variable (Binary Classification Problem)
+								</UL>
 							
-								<h3><LH>Highlights of the Project</LH></h3>
-								<LI>As mentioned above, the application has a lot of cool features to increase productivity. Some examples of these features are shown below.
-									<div class="image main"><img src="images/streamlit_us/streamlit_byairline.PNG" alt="" /></div>
-									<div class="image main"><img src="images/streamlit_us/streamlit_sentiment.PNG" alt="" /></div>
-								<LI>The end-user can also sort the tweets by different hours of day to analyze the trend of when people are the most active. 
-									<div class="image main"><img src="images/streamlit_us/streamlit_byhour.PNG" alt="" /></div>
-								<LI>Lastly, the end-client can try to highlight the most focused words by the customers for different sentiments. This can help them improve their services if they know which areas are affecting the customers the most.  
-									<div class="image main"><img src="images/streamlit_us/wordcloud.PNG" alt="" /></div>
+							
+								<h3><LH>Exploratory Data Analysis/Visualization</LH></h3>
+								<LI>Firstly, let's see some interesting trends and visualizations in our dataset:
+									<div class="image main"><img src="images/bankloan/age.png" alt="" /></div>
+									<div class="image main"><img src="images/bankloan/income.png" alt="" /></div>
+								<LI>We can also check the correlation between our various features. We can see how experience and age have high correlation. As people grow older, they gain more work experience. 
+									<div class="image main"><img src="images/bankloan/heatmap.png" alt="" /></div>
+								<LI>Let's also check the distribution of 2 income groups. One with people who got loan approval versus the second group that didn't get approved.  
+									<div class="image main"><img src="images/bankloan/approved_not_approved.png" alt="" /></div>
+
+								<h3><LH>Data Preparation</LH></h3>
+								<ol>
+									<LI>To start off, we will first convert our binary target column 'Personal Loan' to categorical. This will represent two categories: Approved and Not Approved.
+									<LI>Next, we will randomly split our dataset into 2 parts: 90% for training and 10% for testing. Moreover, the training data is also later on split into 2 parts where 20% of it is used for cross-validation. 
+									<LI>Lastly, we wil standardize all our features so that the neural network can process them properly and assign the correct weightage.  
+								</ol>	
+
+								<h3><LH>Building the Multi-Layer Neural Network</LH></h3>
+								<ol>
+									<LI>At this point, we will start by assigning all the features as input. Next we add some hidden layers to the model and then finish it off with the final target variable.
+									<LI>There are a total of 755,752 trainable parameters once the NN is set up
+								</ol>
+
+								<h3><LH>Implementation and Results (Metrics)</LH></h3>
+								<ol>
+									<LI>We now fit our model to our training data. Below is a plot showing the Model Loss vs. Epoch plot for this model. 
+										<div class="image main"><img src="images/bankloan/modelloss.png" alt="" /></div>
+									<LI>After training and cross validation, we use our model on the testing set to predict the outcome. One more thing to note is that the model is trained for the 'f1' metrics as the dataset is highly unbalanced. It would be unwise to use accuracy metrics. 
+									<LI>Below is the confusion matrix obtained from the final model. 
+										<div class="image main"><img src="images/bankloan/conf_matrix.png" alt="" /></div>
+								</ol>
 
 								<h3><LH>Featured Notebook/Analysis</LH></h3>
-								<LI><a href="https://github.com/shayansoh/Interactive-Dashboard-using-Streamlit/blob/main/data_visualization.ipynb" target="_blank" rel="noopener noreferrer">Notebook</a>
-								<LI><a href="https://github.com/shayansoh/Interactive-Dashboard-using-Streamlit/blob/main/app.py" target="_blank" rel="noopener noreferrer">Application</a>
+								<LI><a href="https://github.com/shayansoh/Bank-Loan-Prediction-using-AI/blob/main/bank-loan-approval-using-AI.ipynb" target="_blank" rel="noopener noreferrer">Notebook</a>
+								<LI><a href="https://github.com/shayansoh/Bank-Loan-Prediction-using-AI/blob/main/UniversalBank.csv" target="_blank" rel="noopener noreferrer">Dataset</a>
 							</section>
 
 					</div>
