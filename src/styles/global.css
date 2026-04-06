@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600&family=IBM+Plex+Mono:wght@600;700&family=Syne:wght@700;800&family=Space+Grotesk:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg:          #060910;
+  --bg-surface:  #0a0d18;
+  --bg-surface2: #0e1220;
+  --border:      #0f1729;
+  --border-lt:   #1a2640;
+
+  --indigo:      #6366f1;
+  --indigo-lt:   #818cf8;
+  --indigo-dim:  rgba(99, 102, 241, 0.15);
+
+  --emerald:     #10b981;
+  --emerald-lt:  #34d399;
+  --emerald-dim: rgba(16, 185, 129, 0.12);
+
+  --text:        #e2e8f0;
+  --text-dim:    #94a3b8;
+  --text-muted:  #334155;
+  --text-faint:  #1e2d50;
+
+  --font-mono:   'Geist Mono', 'Fira Code', monospace;
+  --font-display:'IBM Plex Mono', 'Geist Mono', monospace;
+  --font-body:   'Space Grotesk', sans-serif;
+
+  --radius:      8px;
+  --radius-lg:   12px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--indigo-dim);
+  color: var(--indigo-lt);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-lt);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--indigo);
+}
