@@ -1,6 +1,6 @@
 import styles from './TerminalWindow.module.css'
 
-export default function TerminalWindow({ path = 'shayan@portfolio ~ zsh', children, className = '' }) {
+export default function TerminalWindow({ path = 'shayan@portfolio ~ zsh', children, className = '', bodyStyle = {} }) {
   return (
     <div className={`${styles.window} ${className}`}>
       <div className={styles.chrome}>
@@ -9,7 +9,7 @@ export default function TerminalWindow({ path = 'shayan@portfolio ~ zsh', childr
         <span className={`${styles.dot} ${styles.dotGreen}`} />
         <span className={styles.path}>{path}</span>
       </div>
-      <div className={styles.body}>
+      <div className={styles.body} style={bodyStyle}>
         <div className={styles.scanlines} aria-hidden="true" />
         <div className={styles.content}>
           {children}
