@@ -3,7 +3,11 @@ import styles from './Nav.module.css'
 export default function Nav() {
   return (
     <nav className={styles.nav}>
-      <a href="#hero" className={styles.logo}>SS</a>
+      <a href="#hero" className={styles.logo}>
+        <span className={styles.logoBrace}>{`{`}</span>
+        <span className={styles.logoInit}>SS</span>
+        <span className={styles.logoBrace}>{`}`}</span>
+      </a>
       <div className={styles.links}>
         <a href="#projects" className={styles.link}>[projects]</a>
         <a href="#about" className={styles.link}>[about]</a>

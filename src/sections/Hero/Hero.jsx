@@ -148,8 +148,12 @@ export default function Hero() {
       </TerminalWindow>
 
       <div className={styles.scrollHint} aria-hidden="true">
-        <span className={styles.scrollHintText}>scroll</span>
-        <span className={styles.scrollHintArrow} />
+        <div className={styles.scrollPill}>
+          <span className={styles.scrollPillText}>scroll</span>
+          <svg className={styles.scrollPillArrow} width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <path d="M5 1v8M2 6l3 3 3-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </div>
       </div>
     </section>
   )

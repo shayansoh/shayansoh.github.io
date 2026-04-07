@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# DOMAIN: update Sitemap URL when custom domain is set
+Sitemap: https://shayansoh.github.io/sitemap.xml

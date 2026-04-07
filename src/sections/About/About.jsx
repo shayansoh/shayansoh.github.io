@@ -28,17 +28,24 @@ export default function About() {
         transition={{ duration: 0.6, delay: 0.1 }}
       >
         <div className={styles.bio}>
-          {/* TODO: replace with your bio */}
           <p>
-            Bio coming soon. This section will include a short introduction about who you
-            are, your background, and what you&apos;re currently focused on building.
+            I&apos;m a software engineer and technical consultant based in Toronto. At Deloitte,
+            I lead end-to-end delivery on enterprise engagements, from architecture and API
+            design to CI/CD pipelines and production deployments.
           </p>
           <p>
-            Paragraph two — background, experience, and what drives your work.
+            My background spans machine learning, data engineering, and full-stack development.
+            Before consulting, I worked as a data scientist and ML engineer, building forecasting
+            models, ETL pipelines, and anomaly detection systems. Even earlier, I spent time as
+            an automation engineer on manufacturing lines, which gave me an early appreciation
+            for how systems thinking and process efficiency translate well beyond any single
+            industry.
           </p>
           <p>
-            Paragraph three — current interests, what you&apos;re learning, or anything
-            else you want to highlight.
+            The problems I find most interesting sit at the edge of technical and organizational.
+            You&apos;re not just writing code, you&apos;re figuring out why a handoff keeps
+            breaking, or what would change if data moved in real time instead of overnight.
+            Most of the time, getting it right starts with asking better questions.
           </p>
         </div>
 
@@ -50,26 +57,19 @@ export default function About() {
             <span className={styles.factsPanelPath}>quick-facts.json</span>
           </div>
           <div className={styles.factsPanelBody}>
-            {/* TODO: replace with your details */}
             <div className={styles.factsGroup}>
               <div className={styles.factsLabel}>education</div>
-              <div className={styles.factsItem}>Degree — Institution</div>
-              <div className={styles.factsItem}>Degree — Institution</div>
+              <div className={styles.factsItem}>MEng, Data Analytics &amp; ML &mdash; University of Toronto</div>
+              <div className={styles.factsItem}>BASc, Mechanical Engineering &mdash; University of Waterloo</div>
             </div>
             <div className={styles.factsGroup}>
               <div className={styles.factsLabel}>background</div>
-              <div className={styles.factsItem}>Industry / domain</div>
-              <div className={styles.factsItem}>Skill / focus area</div>
-            </div>
-            <div className={styles.factsGroup}>
-              <div className={styles.factsLabel}>currently building</div>
-              <div className={styles.factsItem}>Project type</div>
-              <div className={styles.factsItem}>Project type</div>
+              <div className={styles.factsItem}>Enterprise software &amp; consulting</div>
+              <div className={styles.factsItem}>ML &amp; data engineering</div>
             </div>
             <div className={styles.factsGroup}>
               <div className={styles.factsLabel}>interests</div>
-              <div className={styles.factsItem}>Interest one</div>
-              <div className={styles.factsItem}>Interest two</div>
+              <div className={styles.factsItem}>Photography</div>
             </div>
           </div>
         </div>

@@ -15,6 +15,9 @@ dist-ssr
 # Superpowers brainstorming session files
 .superpowers/
 
+# Private resume (do not commit)
+.resume/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
