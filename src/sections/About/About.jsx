@@ -36,10 +36,9 @@ export default function About() {
           <p>
             My background spans machine learning, data engineering, and full-stack development.
             Before consulting, I worked as a data scientist and ML engineer, building forecasting
-            models, ETL pipelines, and anomaly detection systems. Even earlier, I spent time as
-            an automation engineer on manufacturing lines, which gave me an early appreciation
-            for how systems thinking and process efficiency translate well beyond any single
-            industry.
+            models, ETL pipelines, and anomaly detection systems. Earlier still, I worked as
+            an automation engineer, writing control logic and scripting process automation
+            across manufacturing systems.
           </p>
           <p>
             The problems I find most interesting sit at the edge of technical and organizational.
@@ -59,8 +58,8 @@ export default function About() {
           <div className={styles.factsPanelBody}>
             <div className={styles.factsGroup}>
               <div className={styles.factsLabel}>education</div>
-              <div className={styles.factsItem}>MEng, Data Analytics &amp; ML &mdash; University of Toronto</div>
-              <div className={styles.factsItem}>BASc, Mechanical Engineering &mdash; University of Waterloo</div>
+              <div className={styles.factsItem}>MEng, Data Analytics &amp; ML &mdash; U of Toronto</div>
+              <div className={styles.factsItem}>BASc, Mech Eng &mdash; U of Waterloo</div>
             </div>
             <div className={styles.factsGroup}>
               <div className={styles.factsLabel}>background</div>
