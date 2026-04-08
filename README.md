@@ -1,16 +1,29 @@
-# React + Vite
+# portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site for [Shayan Sohail](https://shayansohail.com) — software engineer and technical consultant based in Toronto.
 
-Currently, two official plugins are available:
+![Portfolio site preview](public/og-image.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+> **Note:** Replace the image above with a real browser screenshot when convenient.
 
-## React Compiler
+## Live site
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[shayansohail.com](https://shayansohail.com)
 
-## Expanding the ESLint configuration
+## Tech stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React 19](https://react.dev)
+- [Vite](https://vite.dev)
+- [Framer Motion](https://motion.dev)
+- CSS Modules
+
+## Local development
+
+```bash
+npm install
+npm run dev
+```
+
+## Deployment
+
+Hosted on [Cloudflare Pages](https://pages.cloudflare.com). Pushes to `main` deploy automatically.
