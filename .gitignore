@@ -18,6 +18,9 @@ dist-ssr
 # Private resume (do not commit)
 .resume/
 
+# Local notes (do not commit)
+.notes/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
